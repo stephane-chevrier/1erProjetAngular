@@ -1,0 +1,17 @@
+
+<!-- titre et image de la page -->
+<h1>titre de ma page accueil</h1>
+<img src="assets/zen.jpg" width=30% height=30% alt="zen">
+<p></p>
+
+<!-- bouton + qui appelle la methode affichage sur clic -->
+<button type="button" class="btn" (click)="affichage();">+</button>
+<p></p>
+
+<!-- texte affiche suivant condition (true/false) -->
+<div *ngIf="condition;then contenu"></div>
+<ng-template #contenu>texte paragraphe</ng-template>
+
+
+
+
