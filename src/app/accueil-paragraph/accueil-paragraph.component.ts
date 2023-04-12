@@ -10,11 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccueilParagraphComponent implements OnInit {
 
-  // declaration condition
+  // declaration des variables
+
   public condition: any;
 
   constructor() { }
   ngOnInit(): void {
+
   }
 
   // methode affichage : alterne condition true/false

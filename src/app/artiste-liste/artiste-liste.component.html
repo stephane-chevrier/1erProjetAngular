@@ -1,0 +1,10 @@
+<h3>Choisissez votre artiste</h3>
+
+<select [(ngModel)]="select">
+  <option value="default">-------</option>
+  <option *ngFor="let artiste of artistes" [value]="artiste.nom">
+    {{artiste.nom}}
+  </option>
+</select>
+
+<p>Vous avez sélectionné {{selectArtiste(select).nom}}</p>
