@@ -8,13 +8,15 @@ import { AccueilParagraphComponent } from './accueil-paragraph/accueil-paragraph
 import { ArtisteListeComponent } from './artiste-liste/artiste-liste.component';
 import { ArtisteFicheComponent } from './artiste-fiche/artiste-fiche.component';
 import {FormsModule} from "@angular/forms";
+import { BarNavComponent } from './bar-nav/bar-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilParagraphComponent,
     ArtisteListeComponent,
-    ArtisteFicheComponent
+    ArtisteFicheComponent,
+    BarNavComponent
   ],
   imports: [
     BrowserModule,
