@@ -1,5 +1,7 @@
 <!-- affichage du nom de l'artiste -->
 {{artiste.nom}}
+<!-- bouton + qui appelle la methode suppressionArtiste sur clic -->
+<button type="button" class="btn" (click)="suppressionArtiste()">supprimer cet artiste</button>
 <br>
 <!-- affichage de l'image de l'artiste -->
 <img [src]="artiste.urlImage" width=30% height=30% alt="zen">

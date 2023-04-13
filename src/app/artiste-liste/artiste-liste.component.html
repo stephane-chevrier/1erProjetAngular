@@ -1,7 +1,10 @@
 <h3>Liste des artistes</h3>
-<!-- boucle de balayage de la liste et envoi au composant enfant (artiste-fiche) -->
-<div *ngFor="let artiste of artistes">
-  <app-artiste-fiche [artiste]="artiste"></app-artiste-fiche>
-</div>
 
+<!-- boucle de balayage de la liste et  -->
+<div *ngFor="let artiste of artistes">
+
+  <!-- envoi au composant enfant (artiste-fiche) -->
+  <!-- et recuperation de l'evenement envoye par l'enfant (artiste a suprimer) -->
+  <app-artiste-fiche [artiste]="artiste" (artisteSup)="artisteSup($event)"></app-artiste-fiche>
+</div>
 

@@ -22,20 +22,14 @@ export class ArtisteListeComponent implements OnInit {
     }
   ];
 
-  public selectArtiste(s:string) : Artiste {
-    // variable locale pour eviter la possibilite de return undefined
-    let artisteTempo : Artiste | undefined = this.artistes.find(el => el.nom === s);
-    if (artisteTempo != undefined) {
-      return artisteTempo
-    } else {
-      return this.artistes[0]
-    }
-  }
 
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
+  // Methode de suppression de la liste d'artistes le l'artiste en argument
+  artisteSup(artiste:Artiste) : void {
+    this.artistes = this.artistes.filter((artiste1 : Artiste): boolean => artiste1.nom != artiste.nom);
+  }
 }
