@@ -8,6 +8,7 @@ import {Artiste} from "./Artiste";
 })
 export class ArtisteListeComponent implements OnInit {
 
+  // initialisation liste artistes
   artistes : Artiste[]  = [
     {
       nom : "Gauguin",
@@ -21,10 +22,14 @@ export class ArtisteListeComponent implements OnInit {
     }
   ];
 
-  public select : string | undefined;
-
-  public selectArtiste(s:string|undefined) : Artiste | undefined {
-    return this.artistes.find(el => el.nom === s);
+  public selectArtiste(s:string) : Artiste {
+    // variable locale pour eviter la possibilite de return undefined
+    let artisteTempo : Artiste | undefined = this.artistes.find(el => el.nom === s);
+    if (artisteTempo != undefined) {
+      return artisteTempo
+    } else {
+      return this.artistes[0]
+    }
   }
 
   constructor() { }

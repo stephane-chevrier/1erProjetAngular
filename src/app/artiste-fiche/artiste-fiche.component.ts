@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Artiste} from "../artiste-liste/Artiste";
 
 @Component({
   selector: 'app-artiste-fiche',
@@ -12,4 +13,7 @@ export class ArtisteFicheComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Declaration de la recuperation de la variable artiste
+  // ! permet d'éviter que le compilateur pense que la variable peut-être undefined'
+  @Input() artiste! : Artiste;
 }
